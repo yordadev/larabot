@@ -1,0 +1,2 @@
+# larabot
+Laravel Discord Bot
