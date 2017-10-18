@@ -4,6 +4,8 @@
 
 Discord server management bot. Build for myself but Genericly made & easily modified.
 
+> Note - I am still developing this, this is a fresh project.
+
 ## Larabot Documentation
 
 ### Installing Larabot
