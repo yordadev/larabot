@@ -18,9 +18,17 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 ####################################################################################
-
+from Larabot.lib import config as configureThe
 import discord
 
+########### Configuration ###########
+anonCommand             = configureThe.anonCommand()
+showRoleCommand         = configureThe.showRoleCommand()
+googleCmd               = configureThe.googleCommand()
+googleResultCount       = configureThe.googleResultCount()
+########### Configuration ###########
+
+########### Responses ###########
 def kicked(message, user):
     embed = discord.Embed(title=message.server.name + " :: Notification", url='https://github.com/Devitgg/larabot',
                           description="You have been kicked from message.server.name")
@@ -37,7 +45,23 @@ def helpThing(message):
     embed.set_author(name="Larabot", url='https://github.com/Devitgg/larabot',
                      icon_url='https://png.icons8.com/wired/1600/D32F2F/source-code')
     embed.set_thumbnail(url='https://www.shareicon.net/download/2015/11/13/671320_people_512x512.png')
-    embed.add_field(name="Command `.roles`", value='Available in #request_roles', inline=False)
-    embed.add_field(name="Command `g>`", value='Just google it and displays top 5 Results \n\n `g> how do i google this?`', inline=False)
+    embed.add_field(name='Command: ' + showRoleCommand, value='Available in #request_roles', inline=False)
+    embed.add_field(name='Command: ' + googleCmd, value='Just google it and displays top ' + str(googleResultCount) + ' Results. \n `' + googleCmd + ' how do i google this?`', inline=False)
+    embed.add_field(name='Command: ' + anonCommand, value='Private message Larabot directly with \n `' + anonCommand + ' <a confession>`', inline=False)
     embed.set_footer(text="Open Source MIT License by Devitgg")
     return embed
+
+def anonMessage(message, anonCommand, subject):
+    theMessage = message.content.split()
+    theMessage.remove(anonCommand)
+    theMessage = ' '.join(theMessage)
+
+    embed = discord.Embed(title="Fuck my life :: Confessions of a Developer", url='https://discord.gg/Ec6ArRf',
+                          description='Subject: ' + subject)
+    embed.set_author(name="Larabot", url='https://github.com/Devitgg/larabot',
+                     icon_url='https://png.icons8.com/wired/1600/D32F2F/source-code')
+    embed.set_thumbnail(url='https://www.shareicon.net/download/2015/11/13/671320_people_512x512.png')
+    embed.add_field(name='The Confession', value='```' + theMessage + '```', inline=False)
+    embed.set_footer(text="Open Source MIT License by Devitgg")
+    return embed
+########### Responses ###########

@@ -24,40 +24,56 @@
 ############################################################
 
 def token():
-    token = '<insert key here>'
+    token = '<insert key>'
     return token
 
 def googleKey():
-    this = '<insert key here>'
+    this = '<insert key>'
     return this
 
 def modAuthority(message):
-    approvedRoles = ['<set this up>', '<set this up>']
+    approvedRoles = ['<insert role>', '<insert role>']
     for role in message.server.roles:
         for approved in approvedRoles:
             if approved == role.name:
                 return True
 
 def roleChannel():
-    this = '<set this up>'
+    this = 'role_request'
     return this
 
 def googleCommand():
-    this = '<set this up>'
+    this = 'oogle>'
+    return this
+
+def googleResultCount():
+    this = 5
+    return this
+
+def anonCommand():
+    this = 'anon'
+    return this
+
+def anonChannel():
+    this = 'dev_confessions'
+    return this
+
+def helpCommand():
+    this = 'help>'
     return this
 
 def addRoleCommand():
-    this = '<set this up>'
+    this = 'add>'
     return this
 
 def removeRoleCommand():
-    this = '<set this up>'
+    this = 'remove>'
     return this
 
 def showRoleCommand():
-    this = '<set this up>'
+    this = 'roles>'
     return this
 
 def kickCommand():
-    this = '<set this up>'
+    this = 'kick>'
     return this
