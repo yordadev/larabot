@@ -44,6 +44,17 @@ def googleKey():
     return this
 ```
 
+Add what current roles on your server can access `admin` capabilities.
+
+```python
+def modAuthority(message):
+    approvedRoles = ['<add role name>', '<add role name>']
+    for role in message.server.roles:
+        for approved in approvedRoles:
+            if approved == role.name:
+                return True
+```
+
 ### Configure your commands
 
 - Setup what you want your channel to be to manage roles, the bot will only listen in that channel. 
@@ -74,6 +85,18 @@ def kickCommand():
     this = '<set this up>'
     return this
 ```
+### Useage
+
+Use bot in discord by:
+
+```markup
+<addRoleCommand> [role_name]
+<removeRoleCommand> [role_name]
+<showRoleCommand>
+<kickCommand> @mention
+```
+
+>Note - When kicking, you can select multiple people to kick at once by `<kickCommand> @mention @mention @mention>`
 
 ### Support
 
