@@ -75,4 +75,4 @@ def kickCommand():
 
 ### Support
 
-Buy me a [coffee]()? or [contribute]().
+Buy me a [coffee](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FN4Q4KATUUU76)? or [contribute](https://github.com/Devitgg/larabot/pulls).
