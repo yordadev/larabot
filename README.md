@@ -4,29 +4,53 @@
 
 Discord server management bot. Genericly made & easily modified.
 
-### Docs
+## Docs
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Configure your API Keys
+Get your Discord Token and Google Custom Search API Key & place in `<insert key here>`
 
-```markdown
-Syntax highlighted code block
+```python 
+from lib import config as configureThe
 
-# Header 1
-## Header 2
-### Header 3
+def token():
+    token = '<insert key here>'
+    return token
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+def googleKey():
+    this = '<insert key here>'
+    return this
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Configure your commands
+
+- Setup what you want your channel to be to manage roles, the bot will only listen in that channel. 
+- Setup your commands for server management
+
+```Python
+def roleChannel():
+    this = '<set this up>'
+    return this
+
+def googleCommand():
+    this = '<set this up>'
+    return this
+
+def addRoleCommand():
+    this = '<set this up>'
+    return this
+
+def removeRoleCommand():
+    this = '<set this up>'
+    return this
+
+def showRoleCommand():
+    this = '<set this up>'
+    return this
+
+def kickCommand():
+    this = '<set this up>'
+    return this
+```
 
 ### Support
 
