@@ -1,12 +1,33 @@
 <p align="center"><img src='https://www.shareicon.net/download/2015/11/13/671320_people_512x512.png' width=150 height=100/></p>
 
-# Larabot
+# About Larabot
 
 Discord server management bot. Build for myself but Genericly made & easily modified.
 
-## Documentation
+## Larabot Documentation
 
-### Configure your API Keys
+### Installing Larabot
+
+Install the necessary dependencies
+
+```
+pip install discordpy
+pip install gsearch
+```
+
+## Requirements
+
+- Python 3.4.2+
+- `aiohttp` library
+- `websockets` library
+- `PyNaCl` library (optional, for voice only)
+    - On Linux systems this requires the `libffi` library. You can install in
+      debian based systems by doing `sudo apt-get install libffi-dev`.
+
+Usually `pip` will handle these for you.
+
+
+### Setting up Larabot
 Get your Discord Token and Google Custom Search API Key & place in `<insert key here>`
 
 ```python 
