@@ -1,33 +1,78 @@
 <p align="center"><img src='https://www.shareicon.net/download/2015/11/13/671320_people_512x512.png' width=150 height=100/></p>
 
-# Welcome to the Larabot Repo
+# About Larabot
 
-Discord server management bot. Genericly made & easily modified.
+Discord server management bot. Build for myself but Genericly made & easily modified.
 
-### Docs
+## Larabot Documentation
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Installing Larabot
 
-```markdown
-Syntax highlighted code block
+Install the necessary dependencies
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+pip install discordpy
+pip install gsearch
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Requirements
+
+- Python 3.4.2+
+- `aiohttp` library
+- `websockets` library
+- `PyNaCl` library (optional, for voice only)
+    - On Linux systems this requires the `libffi` library. You can install in
+      debian based systems by doing `sudo apt-get install libffi-dev`.
+
+Usually `pip` will handle these for you.
+
+
+### Setting up Larabot
+Get your Discord Token and Google Custom Search API Key & place in `<insert key here>`
+
+```python 
+from lib import config as configureThe
+
+def token():
+    token = '<insert key here>'
+    return token
+
+def googleKey():
+    this = '<insert key here>'
+    return this
+```
+
+### Configure your commands
+
+- Setup what you want your channel to be to manage roles, the bot will only listen in that channel. 
+- Setup your commands for server management
+
+```Python
+def roleChannel():
+    this = '<set this up>'
+    return this
+
+def googleCommand():
+    this = '<set this up>'
+    return this
+
+def addRoleCommand():
+    this = '<set this up>'
+    return this
+
+def removeRoleCommand():
+    this = '<set this up>'
+    return this
+
+def showRoleCommand():
+    this = '<set this up>'
+    return this
+
+def kickCommand():
+    this = '<set this up>'
+    return this
+```
 
 ### Support
 
-Buy me a [coffee]()? or [contribute]().
+Buy me a [coffee](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FN4Q4KATUUU76)? or [contribute](https://github.com/Devitgg/larabot/pulls).
