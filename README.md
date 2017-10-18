@@ -1,4 +1,6 @@
-## Welcome to the Larabot Repo
+<p align="center"><img src='https://www.shareicon.net/download/2015/11/13/671320_people_512x512.png' width=150 height=100/></p>
+
+# Welcome to the Larabot Repo
 
 Discord server management bot. Genericly made & easily modified.
 
