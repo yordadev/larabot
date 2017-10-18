@@ -98,6 +98,12 @@ Use bot in discord by:
 
 >Note - When kicking, you can select multiple people to kick at once by `<kickCommand> @mention @mention @mention>`
 
+### Features Coming
+- Googling Memes and returning meme Img
+- Banning
+- Create Roles
+- Games
+
 ### Support
 
 Buy me a [coffee](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FN4Q4KATUUU76)? or [contribute](https://github.com/Devitgg/larabot/pulls).
