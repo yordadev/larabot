@@ -1,10 +1,10 @@
 <p align="center"><img src='https://www.shareicon.net/download/2015/11/13/671320_people_512x512.png' width=150 height=100/></p>
 
-# Welcome to the Larabot Repo
+# Larabot
 
-Discord server management bot. Genericly made & easily modified.
+Discord server management bot. Build for myself but Genericly made & easily modified.
 
-## Docs
+## Documentation
 
 ### Configure your API Keys
 Get your Discord Token and Google Custom Search API Key & place in `<insert key here>`
