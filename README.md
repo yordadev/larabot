@@ -8,7 +8,7 @@ Discord server management bot. Build for myself but Genericly made & easily modi
 
 ## Larabot Wiki
 
-Complete Documentation on Larabot's [wiki](https://github.com/Devitgg/larabot/wiki/1.-Home) page.
+Complete documentation on Larabot's [wiki](https://github.com/Devitgg/larabot/wiki/1.-Home) page.
 
 ### Support
 
