@@ -24,40 +24,83 @@
 ############################################################
 
 def token():
-    token = '<insert key here>'
+    token = '<insert>'
     return token
 
 def googleKey():
-    this = '<insert key here>'
+    this = '<insert>'
     return this
 
 def modAuthority(message):
-    approvedRoles = ['<set this up>', '<set this up>']
+    approvedRoles = ['<insert>']
+    for role in message.server.roles:
+        for approved in approvedRoles:
+            if approved == role.name:
+                return True
+
+def adminAuthority(message):
+    approvedRoles = ['<insert>']
     for role in message.server.roles:
         for approved in approvedRoles:
             if approved == role.name:
                 return True
 
 def roleChannel():
-    this = '<set this up>'
+    this = '<insert>'
     return this
 
-def googleCommand():
-    this = '<set this up>'
+def searchCommand():
+    this = '<insert>'
+    return this
+
+def googleResultCount():
+    this = 5
+    return this
+
+def anonCommand():
+    this = '<insert>'
+    return this
+
+def anonChannel():
+    this = '<insert>'
+    return this
+
+def helpCommand():
+    this = '<insert>'
+    return this
+
+def codeCommand():
+    this = '<insert>'
     return this
 
 def addRoleCommand():
-    this = '<set this up>'
+    this = '<insert>'
     return this
 
 def removeRoleCommand():
-    this = '<set this up>'
+    this = '<insert>'
     return this
 
 def showRoleCommand():
-    this = '<set this up>'
+    this = '<insert>'
     return this
 
 def kickCommand():
-    this = '<set this up>'
+    this = '<insert>'
+    return this
+
+def banCommand():
+    this = '<insert>'
+    return this
+
+def plusRepCommand():
+    this = '<insert>'
+    return this
+
+def viewRepCommand():
+    this = '<insert>'
+    return this
+
+def clearCommand():
+    this = '<insert>'
     return this

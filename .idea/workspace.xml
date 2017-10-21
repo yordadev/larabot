@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e219616f-3f5a-4941-96ef-2083d0bd375a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Larabot/lib/config.py" afterPath="$PROJECT_DIR$/Larabot/lib/config.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Larabot/lib/responses.py" afterPath="$PROJECT_DIR$/Larabot/lib/responses.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Larabot/main.py" afterPath="$PROJECT_DIR$/Larabot/main.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,11 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="responses.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="responses.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Larabot/lib/responses.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-298">
-              <caret line="61" column="55" lean-forward="true" selection-start-line="61" selection-start-column="55" selection-end-line="61" selection-end-column="55" />
+            <state relative-caret-position="484">
+              <caret line="107" column="85" lean-forward="true" selection-start-line="107" selection-start-column="85" selection-end-line="107" selection-end-column="85" />
               <folding>
                 <element signature="e#1286#1332#0" expanded="true" />
               </folding>
@@ -40,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Larabot/lib/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="60" column="17" lean-forward="false" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
+            <state relative-caret-position="586">
+              <caret line="104" column="20" lean-forward="false" selection-start-line="104" selection-start-column="20" selection-end-line="104" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -62,9 +59,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>googleCmd</find>
+      <find>Open Source MIT License by Devitgg</find>
     </findStrings>
     <replaceStrings>
       <replace>searchCommand</replace>
+      <replace>Created with &lt;3 by Devitgg</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -77,9 +76,9 @@
         <option value="$USER_HOME$/PycharmProjects/DiscordFramework/Route/piping.py" />
         <option value="$USER_HOME$/PycharmProjects/DiscordFramework/index.py" />
         <option value="$USER_HOME$/PycharmProjects/DiscordFramework/App/Handler/responses.py" />
-        <option value="$PROJECT_DIR$/Larabot/lib/config.py" />
         <option value="$PROJECT_DIR$/Larabot/main.py" />
         <option value="$PROJECT_DIR$/Larabot/lib/responses.py" />
+        <option value="$PROJECT_DIR$/Larabot/lib/config.py" />
       </list>
     </option>
   </component>
@@ -213,7 +212,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16251354" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16251354" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -338,14 +337,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Larabot/lib/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="60" column="17" lean-forward="false" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Larabot/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -358,11 +349,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Larabot/lib/responses.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-298">
-          <caret line="61" column="55" lean-forward="true" selection-start-line="61" selection-start-column="55" selection-end-line="61" selection-end-column="55" />
+        <state relative-caret-position="484">
+          <caret line="107" column="85" lean-forward="true" selection-start-line="107" selection-start-column="85" selection-end-line="107" selection-end-column="85" />
           <folding>
             <element signature="e#1286#1332#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Larabot/lib/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="586">
+          <caret line="104" column="20" lean-forward="false" selection-start-line="104" selection-start-column="20" selection-end-line="104" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
