@@ -127,22 +127,25 @@ async def on_message(message):
 
 ############## Google Stuff ##############
     if searchCommand in message.content:
+
         from gsearch.googlesearch import search
+
         query = message.content.split()
         query.remove(searchCommand)
         results = search(str(query))  # returns 10 or less results
-        result = []
-        header = 'Thanks for using oogle, here are your results! \n ```\n'
-        footer = '```'
-        result = [footer] + result
 
-        for each in results:
-            eachResult = '\n The Title: ' + each[0] + ' \n Link: ' + each[1] + ' \n'
-            result = [eachResult] + result
+        if len(results) > 0:
+            await client.send_message(message.channel, 'Thanks for using oogle, here are your results!')
 
-        result = [header] + result
-        result = ' '.join(result)
-        await client.send_message(message.channel, result)
+            tmp = []
+
+            for each in results:
+                tmp.append('*`' + each[0] + '`* \n<' + each[1] + '>\n\n')
+
+            await client.send_message(message.channel, ''.join(tmp))
+        else:
+            await client.send_message(message.channel, 'No results found!!! WTF ??')
+
 
 ############## AnonMessages ##############
 
