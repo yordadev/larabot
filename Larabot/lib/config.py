@@ -24,33 +24,33 @@
 ############################################################
 
 def token():
-    token = '<insert>'
+    token = 'insert here'
     return token
 
 def googleKey():
-    this = '<insert>'
+    this = 'insert here'
     return this
 
 def modAuthority(message):
-    approvedRoles = ['<insert>']
+    approvedRoles = ['insert here']
     for role in message.server.roles:
         for approved in approvedRoles:
             if approved == role.name:
                 return True
 
 def adminAuthority(message):
-    approvedRoles = ['<insert>']
+    approvedRoles = ['insert here']
     for role in message.server.roles:
         for approved in approvedRoles:
             if approved == role.name:
                 return True
 
 def roleChannel():
-    this = '<insert>'
+    this = 'role_request'
     return this
 
 def searchCommand():
-    this = '<insert>'
+    this = 'oogle>'
     return this
 
 def googleResultCount():
@@ -58,49 +58,49 @@ def googleResultCount():
     return this
 
 def anonCommand():
-    this = '<insert>'
+    this = 'anon>'
     return this
 
 def anonChannel():
-    this = '<insert>'
+    this = 'dev_confessions'
     return this
 
 def helpCommand():
-    this = '<insert>'
+    this = 'help>'
     return this
 
 def codeCommand():
-    this = '<insert>'
+    this = '>'
     return this
 
 def addRoleCommand():
-    this = '<insert>'
+    this = 'add>'
     return this
 
 def removeRoleCommand():
-    this = '<insert>'
-    return this
-
-def showRoleCommand():
-    this = '<insert>'
+    this = 'remove>'
     return this
 
 def kickCommand():
-    this = '<insert>'
+    this = 'kick>'
     return this
 
 def banCommand():
-    this = '<insert>'
+    this = 'ban>'
     return this
 
 def plusRepCommand():
-    this = '<insert>'
+    this = 'rep>'
     return this
 
 def viewRepCommand():
-    this = '<insert>'
+    this = 'view>'
+    return this
+
+def roleInfoCommand():
+    this = 'roles>'
     return this
 
 def clearCommand():
-    this = '<insert>'
+    this = 'clear>'
     return this

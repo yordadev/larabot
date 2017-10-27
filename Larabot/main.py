@@ -35,13 +35,13 @@ helpCommand             = configureThe.helpCommand()
 anonCommand             = configureThe.anonCommand()
 addRoleCommand          = configureThe.addRoleCommand()
 removeRoleCommand       = configureThe.removeRoleCommand()
-showRoleCommand         = configureThe.showRoleCommand()
 kickCommand             = configureThe.kickCommand()
 banCommand              = configureThe.banCommand()
 codeCommand             = configureThe.codeCommand()
 clearCommand            = configureThe.clearCommand()
 searchCommand           = configureThe.searchCommand()
 googleResultCount       = configureThe.googleResultCount()
+roleInfoCommand         = configureThe.roleInfoCommand()
 
              ## Channels ##
 anonChannel             = configureThe.anonChannel()
@@ -55,6 +55,7 @@ async def on_ready():
     print('Logged in as')
     print(client.user.name)
     print(client.user.id)
+    print(client.get_all_emojis())
     for server in client.servers:
         for channel in server.channels:
             print(channel.id + '\n ' + channel.name)
@@ -63,22 +64,10 @@ async def on_ready():
 
 
 
-########### Welcome Message ###########
-@client.event
-async def on_member_join(member):
-    for server in client.servers:
-        for channel in server.channels:
-            if channel.id == '369989443643506688':
-                response = fetchThis.accessServer()
-                await client.send_message(channel, embed=response)
-########### Welcome Message ###########
-
-
-
 @client.event
 async def on_message(message):
-    if message.author == client.user:
-        return
+
+
 
 ########### HELP ###########
     if message.content == helpCommand:
@@ -90,20 +79,32 @@ async def on_message(message):
     if message.content.startswith(codeCommand):
         response = fetchThis.codeType(message, codeCommand)
         await client.delete_message(message)
-        await client.send_message(message.channel, response)
+        this = await client.send_message(message.channel, response)
+        await client.add_reaction(this, '\U0001F44D')
+        await client.add_reaction(this, '👎')
 
 ########### User Managment ###########
+    ##### Role Request Information ####
+    if message.content.startswith(roleInfoCommand):
+        if roleChannel in message.channel.name:
+            response = fetchThis.roleInfo()
+            await client.send_message(message.channel, embed=response)
+
 
     #### Adding a role ##
     if message.content.startswith(addRoleCommand):
         if roleChannel in message.channel.name:
             for role in message.server.roles:
                 if role.name in message.content:
-                    await client.send_typing(message.channel)
-                    await client.add_roles(message.author, role)
+                    if role.name == 'support':
+                        await client.send_message(message.channel, 'Sorry, not sorry but.. I couldnt perform this '
+                                                                   'command. \n ' + '```' + message.content + '```')
+                    else:
+                        await client.send_typing(message.channel)
+                        await client.add_roles(message.author, role)
+                        response = fetchThis.accessAdded(role.name)
+                        return await client.send_message(message.author, embed=response)
 
-                    response = fetchThis.accessAdded(role.name)
-                    return await client.send_message(message.channel, embed=response)
 
             await client.send_message(message.channel, 'Sorry, not sorry but.. I couldnt perform this '
                                                        'command. \n ' + '```' + message.content + '```')
@@ -130,8 +131,18 @@ async def on_message(message):
         query = message.content.split()
         query.remove(searchCommand)
         results = search(str(query))  # returns 10 or less results
-        for count in range(0, googleResultCount):
-            await client.send_message(message.channel, results[count])
+        result = []
+        header = 'Thanks for using oogle, here are your results! \n ```\n'
+        footer = '```'
+        result = [footer] + result
+
+        for each in results:
+            eachResult = '\n The Title: ' + each[0] + ' \n Link: ' + each[1] + ' \n'
+            result = [eachResult] + result
+
+        result = [header] + result
+        result = ' '.join(result)
+        await client.send_message(message.channel, result)
 
 ############## AnonMessages ##############
 
@@ -143,14 +154,18 @@ async def on_message(message):
         if subject is None:
             await client.send_message(message.author, '`Sorry` but your confession time `ran out` (`60 Seconds`).\n'
                                                       'Please resubmit your confession and `fill out the subject line`.')
+        if subject.author == message.author:
+            response = fetchThis.anonMessage(message, anonCommand, subject.content)
+            for server in client.servers:
+                for channel in server.channels:
+                    if anonChannel == channel.name:
+                        this = await client.send_message(channel, embed=response)
+                        await client.add_reaction(this, '\U0001F44D')
+                        await client.add_reaction(this, '😂')
+                        await client.add_reaction(this, '❤')
+                        await client.add_reaction(this, '💔')
+                        await client.add_reaction(this, '👎')
 
-        response = fetchThis.anonMessage(message, anonCommand, subject.content)
-        for server in client.servers:
-            for channel in server.channels:
-                if anonChannel == channel.name:
-                   this = await client.send_message(channel, embed=response)
-                   await client.add_reaction(this, '\U0001F44D')
-                   await client.add_reaction(this, '👎')
 
 
 ############## Server Management ##############
@@ -162,7 +177,9 @@ async def on_message(message):
             for user in message.mentions:
                 response = fetchThis.kicked(message, user)
                 await client.send_message(user, embed=response)
-                await client.send_message(message.channel, user.name + ' err rip, bye felica. :unamused: ')
+                this = await client.send_message(message.channel, user.name + ' err rip, bye felica. :unamused: ')
+                await client.add_reaction(this, '\U0001F44D')
+                await client.add_reaction(this, '👎')
                 await client.kick(user)
 
     #### Banning Users ####
@@ -172,17 +189,28 @@ async def on_message(message):
             for user in message.mentions:
                 response = fetchThis.banned(message, user)
             await client.send_message(user, embed=response)
-            await client.send_message(message.channel, user.name + ' err rip, bye felica. :unamused: ')
+            this = await client.send_message(message.channel, user.name + ' err rip, bye felica. :unamused: ')
+            await client.add_reaction(this, '\U0001F44D')
+            await client.add_reaction(this, '👎')
             await client.ban(user)
 
     #### Clear Messages ####
     if message.content.startswith(clearCommand):
         checkAuthority = configureThe.modAuthority(message)
         if checkAuthority is True:
-            tmp = await client.send_message(message.channel, 'Clearing messages for you ' + message.author.name + '...')
+            numOfMessages = message.content.split()
+            numOfMessages.remove(clearCommand)
+            numOfMessages = ' '.join(numOfMessages)
+            count = 0
             async for msg in client.logs_from(message.channel):
-                await client.delete_message(msg)
-            await client.send_message(message.channel, 'How many chucks, does it take to chuck a chucking chucker chuck?')
+                if count == int(numOfMessages):
+                    return await client.send_message(message.channel, 'Alright ' + message.author.mention +
+                                                     '. I have removed ' + numOfMessages + ' messages from this channel!')
+                else:
+                    await client.delete_message(msg)
+                    count = count + 1
+                    print(count)
 
+    #### Moderator Help ####
 
 client.run(payTheBridgeToll)
