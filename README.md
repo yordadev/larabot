@@ -28,6 +28,8 @@ Usually `pip` will handle these for you.
 
 
 ### Setting up Larabot
+`!Important!` Rename `example_config.py` to `config.py`
+
 Get your Discord Token and Google Custom Search API Key & place in `<insert key here>`
 
 ```python 
