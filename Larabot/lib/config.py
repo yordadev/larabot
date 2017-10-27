@@ -24,29 +24,29 @@
 ############################################################
 
 def token():
-    token = 'insert here'
+    token = 'MzczNTMyMTc1Mzg5NDI1NjY0.DNULLg.-b6djvyu525g7alN6rgewlIdmlQ'
     return token
 
 def googleKey():
-    this = 'insert here'
+    this = 'AIzaSyAbElS413Iw9_5yvJgIXpzesM3pQgVQDJE'
     return this
 
 def modAuthority(message):
-    approvedRoles = ['insert here']
+    approvedRoles = ['Admin']
     for role in message.server.roles:
         for approved in approvedRoles:
             if approved == role.name:
                 return True
 
 def adminAuthority(message):
-    approvedRoles = ['insert here']
+    approvedRoles = ['Admin']
     for role in message.server.roles:
         for approved in approvedRoles:
             if approved == role.name:
                 return True
 
 def roleChannel():
-    this = 'role_request'
+    this = 'general'
     return this
 
 def searchCommand():
@@ -62,7 +62,7 @@ def anonCommand():
     return this
 
 def anonChannel():
-    this = 'dev_confessions'
+    this = 'general'
     return this
 
 def helpCommand():
