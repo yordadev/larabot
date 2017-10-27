@@ -24,15 +24,22 @@
 ############################################################
 
 def token():
-    token = '<insert key>'
+    token = 'insert here'
     return token
 
 def googleKey():
-    this = '<insert key>'
+    this = 'insert here'
     return this
 
 def modAuthority(message):
-    approvedRoles = ['<insert role>', '<insert role>']
+    approvedRoles = ['insert here']
+    for role in message.server.roles:
+        for approved in approvedRoles:
+            if approved == role.name:
+                return True
+
+def adminAuthority(message):
+    approvedRoles = ['insert here']
     for role in message.server.roles:
         for approved in approvedRoles:
             if approved == role.name:
@@ -42,7 +49,7 @@ def roleChannel():
     this = 'role_request'
     return this
 
-def googleCommand():
+def searchCommand():
     this = 'oogle>'
     return this
 
@@ -51,7 +58,7 @@ def googleResultCount():
     return this
 
 def anonCommand():
-    this = 'anon'
+    this = 'anon>'
     return this
 
 def anonChannel():
@@ -62,6 +69,10 @@ def helpCommand():
     this = 'help>'
     return this
 
+def codeCommand():
+    this = '>'
+    return this
+
 def addRoleCommand():
     this = 'add>'
     return this
@@ -70,10 +81,26 @@ def removeRoleCommand():
     this = 'remove>'
     return this
 
-def showRoleCommand():
+def kickCommand():
+    this = 'kick>'
+    return this
+
+def banCommand():
+    this = 'ban>'
+    return this
+
+def plusRepCommand():
+    this = 'rep>'
+    return this
+
+def viewRepCommand():
+    this = 'view>'
+    return this
+
+def roleInfoCommand():
     this = 'roles>'
     return this
 
-def kickCommand():
-    this = 'kick>'
+def clearCommand():
+    this = 'clear>'
     return this
